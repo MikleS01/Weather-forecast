@@ -1,8 +1,12 @@
 import requests
-city = input("Введите название вашей попмйки в которой вы живете:")
+
+city = input("Введите название вашего населенного пункта:")
 url = f"https://wttr.in//{city}"
-settings = {"n": "","lang": "ru"
-    }
+settings = {
+    "n": "",
+    "lang": "ru"
+}
+    
 
 response = requests.get(url, params = settings)
 response.raise_for_status()
